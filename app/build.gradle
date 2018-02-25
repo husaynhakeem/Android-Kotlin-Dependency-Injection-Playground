@@ -33,8 +33,15 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:3.0.1"
 
     // Mockito
+    androidTestImplementation "com.nhaarman:mockito-kotlin:1.5.0"
     testImplementation "com.nhaarman:mockito-kotlin:1.5.0"
+
+    // Barista
+    androidTestImplementation('com.schibsted.spain:barista:2.3.0') {
+        exclude group: 'com.android.support'
+        exclude group: 'org.jetbrains.kotlin'
+    }
 }

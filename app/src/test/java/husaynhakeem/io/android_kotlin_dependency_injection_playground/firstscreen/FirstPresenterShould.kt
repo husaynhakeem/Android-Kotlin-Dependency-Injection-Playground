@@ -32,7 +32,7 @@ class FirstPresenterShould {
         presenter.start()
 
         verify(view).showMessage(captor.capture())
-        assertTrue(captor.firstValue == message || captor.firstValue == anotherMessage)
+        assertTrue(message == captor.firstValue || anotherMessage == captor.firstValue)
     }
 
     @Test
