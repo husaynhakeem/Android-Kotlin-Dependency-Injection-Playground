@@ -32,6 +32,6 @@ class FirstPresenter @Inject constructor(private val view: FirstContract.View) :
         if (message == this.message)
             view.showSecondScreen(MessageType.MAGIC)
         else if (message == anotherMessage)
-            view.showSecondScreen(MessageType.ANYTHING)
+            view.showSecondScreen(MessageType.ANOTHER)
     }
 }

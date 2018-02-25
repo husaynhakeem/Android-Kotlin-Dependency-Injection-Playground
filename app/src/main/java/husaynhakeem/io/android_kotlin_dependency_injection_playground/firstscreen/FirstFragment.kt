@@ -42,7 +42,7 @@ class FirstFragment : Fragment(), FirstContract.View {
     override fun showSecondScreen(messageType: MessageType) {
         when (messageType) {
             MessageType.MAGIC -> showSecondScreenWithImage(R.drawable.magic)
-            MessageType.ANYTHING -> showSecondScreenWithImage(R.drawable.anything)
+            MessageType.ANOTHER -> showSecondScreenWithImage(R.drawable.anything)
         }
     }
 

@@ -6,5 +6,5 @@ package husaynhakeem.io.android_kotlin_dependency_injection_playground.firstscre
 
 enum class MessageType {
     MAGIC,
-    ANYTHING
+    ANOTHER
 }
