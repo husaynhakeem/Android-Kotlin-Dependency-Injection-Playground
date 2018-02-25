@@ -4,9 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.annotation.DrawableRes
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import husaynhakeem.io.android_kotlin_dependency_injection_playground.R
 import husaynhakeem.io.android_kotlin_dependency_injection_playground.secondscreen.SecondActivity
 import kotlinx.android.synthetic.main.fragment_first.*
@@ -27,6 +25,7 @@ class FirstFragment : Fragment(), FirstContract.View {
         super.onViewCreated(view, savedInstanceState)
         presenter.start()
         setUpMessageClickListener()
+        setHasOptionsMenu(true)
     }
 
     private fun setUpMessageClickListener() {
@@ -55,6 +54,18 @@ class FirstFragment : Fragment(), FirstContract.View {
 
     override fun setPresenter(presenter: FirstContract.Presenter) {
         this.presenter = presenter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.menu_first, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.firstScreenRefreshMenuItem) {
+            presenter.start()
+            return true
+        }
+        return false
     }
 
     companion object {

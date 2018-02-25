@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Android-Kotlin-Dependency-Injection-Playground</string>
+    <string name="app_name">Kotlin DI Playground</string>
+    <string name="refresh">Refresh</string>
 </resources>

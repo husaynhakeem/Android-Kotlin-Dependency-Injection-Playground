@@ -11,15 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".firstscreen.FirstActivity">
+        <activity
+            android:name=".firstscreen.FirstActivity"
+            android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".secondscreen.SecondActivity" />
+        <activity
+            android:name=".secondscreen.SecondActivity"
+            android:configChanges="screenSize|orientation" />
 
     </application>
-
 </manifest>
