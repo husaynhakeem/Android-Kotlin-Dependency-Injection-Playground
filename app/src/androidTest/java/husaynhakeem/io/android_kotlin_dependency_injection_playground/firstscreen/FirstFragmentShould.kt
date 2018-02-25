@@ -61,7 +61,7 @@ class FirstFragmentShould {
 
         intended(anyOf(
                 IntentMatchers.hasExtra(FirstFragment.EXTRA_IMAGE_RES_ID, R.drawable.magic),
-                IntentMatchers.hasExtra(FirstFragment.EXTRA_IMAGE_RES_ID, R.drawable.anything)
+                IntentMatchers.hasExtra(FirstFragment.EXTRA_IMAGE_RES_ID, R.drawable.another)
         ))
     }
 

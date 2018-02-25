@@ -10,10 +10,8 @@ import husaynhakeem.io.android_kotlin_dependency_injection_playground.BaseView
 interface SecondContract {
 
     interface View : BaseView<Presenter> {
-
+        fun displayImage()
     }
 
-    interface Presenter : BasePresenter {
-
-    }
+    interface Presenter : BasePresenter
 }
