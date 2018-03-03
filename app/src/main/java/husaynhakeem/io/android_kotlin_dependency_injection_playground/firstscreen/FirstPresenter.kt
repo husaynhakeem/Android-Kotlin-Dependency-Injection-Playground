@@ -1,28 +1,14 @@
 package husaynhakeem.io.android_kotlin_dependency_injection_playground.firstscreen
 
 import java.util.*
-import javax.inject.Inject
-import javax.inject.Named
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
-
-class FirstPresenter @Inject constructor(private val view: FirstContract.View) : FirstContract.Presenter {
-
-    @field:[Inject Named("magic")]
-    lateinit var message: String
-
-    @field:[Inject Named("anything")]
-    lateinit var anotherMessage: String
-
-    @Inject
-    fun setUpView() {
-        view.setPresenter(this)
-    }
+class FirstPresenter(
+        private val view: FirstContract.View,
+        private val message: String,
+        private val anotherMessage: String) : FirstContract.Presenter {
 
     override fun start() {
-        when(Random().nextInt(2)) {
+        when (Random().nextInt(2)) {
             0 -> view.showMessage(message)
             1 -> view.showMessage(anotherMessage)
         }

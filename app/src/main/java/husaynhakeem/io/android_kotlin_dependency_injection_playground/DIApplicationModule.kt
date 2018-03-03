@@ -1,22 +1,16 @@
 package husaynhakeem.io.android_kotlin_dependency_injection_playground
 
-import android.app.Application
+import android.content.Context
 import android.util.Log
 import com.squareup.picasso.Picasso
-import dagger.Module
-import dagger.Provides
-import javax.inject.Singleton
+import org.koin.android.ext.koin.androidApplication
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
-
-@Module
-class DIApplicationModule(private val application: Application) {
-
-    @Singleton
-    @Provides
-    fun providesPicasso() = Picasso.Builder(application)
-            .listener { _, uri, _ -> Log.e("Picasso", "Failed to load image $uri") }
-            .build()
+val applicationModule: Module = applicationContext {
+    bean { getPicassoInstance(androidApplication()) }
 }
+
+private fun getPicassoInstance(context: Context): Picasso = Picasso.Builder(context)
+        .listener { _, uri, _ -> Log.e("Picasso", "Failed to load image $uri") }
+        .build()

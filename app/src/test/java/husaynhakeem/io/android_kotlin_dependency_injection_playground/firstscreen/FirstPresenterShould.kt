@@ -7,10 +7,6 @@ import org.junit.Test
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
-
 class FirstPresenterShould {
 
     private val message = "Show me some magic!"
@@ -22,9 +18,7 @@ class FirstPresenterShould {
 
     @Before
     fun setUp() {
-        presenter = FirstPresenter(view)
-        presenter.message = message
-        presenter.anotherMessage = anotherMessage
+        presenter = FirstPresenter(view, message, anotherMessage)
     }
 
     @Test

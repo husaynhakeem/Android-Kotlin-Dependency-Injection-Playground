@@ -1,16 +1,14 @@
 package husaynhakeem.io.android_kotlin_dependency_injection_playground
 
 import android.app.Application
-
-/**
- * Created by husaynhakeem on 2/24/18.
- */
+import husaynhakeem.io.android_kotlin_dependency_injection_playground.firstscreen.firstModule
+import husaynhakeem.io.android_kotlin_dependency_injection_playground.secondscreen.secondModule
+import org.koin.android.ext.android.startKoin
 
 class DIApplication : Application() {
 
-    val component: DIApplicationComponent by lazy {
-        DaggerDIApplicationComponent.builder()
-                .dIApplicationModule(DIApplicationModule(this))
-                .build()
+    override fun onCreate() {
+        super.onCreate()
+        startKoin(this, listOf(applicationModule, firstModule, secondModule))
     }
 }

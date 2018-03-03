@@ -16,10 +16,6 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
-
 class FirstFragmentShould {
 
     private val ONE_SECOND_IN_MILLIS = 1000L

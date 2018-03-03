@@ -8,14 +8,12 @@ import android.view.*
 import husaynhakeem.io.android_kotlin_dependency_injection_playground.R
 import husaynhakeem.io.android_kotlin_dependency_injection_playground.secondscreen.SecondActivity
 import kotlinx.android.synthetic.main.fragment_first.*
+import org.koin.android.ext.android.inject
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
 
 class FirstFragment : Fragment(), FirstContract.View {
 
-    private lateinit var presenter: FirstContract.Presenter
+    val presenter: FirstContract.Presenter by inject(parameters = mapOf(FIRST_VIEW to this))
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_first, container, false)
@@ -50,10 +48,6 @@ class FirstFragment : Fragment(), FirstContract.View {
             putExtra(EXTRA_IMAGE_RES_ID, imageResId)
             startActivity(this)
         }
-    }
-
-    override fun setPresenter(presenter: FirstContract.Presenter) {
-        this.presenter = presenter
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {

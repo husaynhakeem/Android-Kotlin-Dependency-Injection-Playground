@@ -1,28 +1,14 @@
 package husaynhakeem.io.android_kotlin_dependency_injection_playground.firstscreen
 
-import dagger.Module
-import dagger.Provides
-import husaynhakeem.io.android_kotlin_dependency_injection_playground.injection.FeatureScoped
-import javax.inject.Named
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
+const val FIRST_VIEW = "first_view"
+const val MAGIC = "magic"
+const val ANYTHING = "anything"
 
-@Module
-class FirstModule(private val view: FirstContract.View) {
-
-    @FeatureScoped
-    @Provides
-    @Named("magic")
-    fun providesMessage(): String = "Show me some magic!"
-
-    @FeatureScoped
-    @Provides
-    @Named("anything")
-    fun providesAnotherMessage(): String = "Show me anything.."
-
-    @FeatureScoped
-    @Provides
-    fun providesFirstView(): FirstContract.View = view
+val firstModule: Module = applicationContext {
+    factory { params -> FirstPresenter(params[FIRST_VIEW], get(MAGIC), get(ANYTHING)) as FirstContract.Presenter }
+    bean(MAGIC) { "Show me some magic!" }
+    bean(ANYTHING) { "Show me anything.." }
 }

@@ -1,17 +1,10 @@
 package husaynhakeem.io.android_kotlin_dependency_injection_playground.secondscreen
 
-import dagger.Module
-import dagger.Provides
-import husaynhakeem.io.android_kotlin_dependency_injection_playground.injection.FeatureScoped
+import org.koin.dsl.module.Module
+import org.koin.dsl.module.applicationContext
 
-/**
- * Created by husaynhakeem on 2/24/18.
- */
+const val SECOND_VIEW = "second_view"
 
-@Module
-class SecondModule(private val view: SecondContract.View) {
-
-    @FeatureScoped
-    @Provides
-    fun providesView() = view
+val secondModule : Module = applicationContext {
+    factory { params -> SecondPresenter(params[SECOND_VIEW]) as SecondContract.Presenter }
 }
