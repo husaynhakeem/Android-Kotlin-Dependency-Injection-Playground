@@ -24,3 +24,5 @@ This project hosts the same sample application implemented using different depen
 ## The sample app
 
 The chosen sample application is simple enough that one can understand it pretty fast, but intentionaly a bit more complex -than one would normally implement in a real world scenario- so as to implement as many features provided by the used dependency injection frameworks.
+
+<img src="https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/blob/master/app/images/android_kotlin_di_playground_screens.png" alt="Android Kotlin DI playground screens">
