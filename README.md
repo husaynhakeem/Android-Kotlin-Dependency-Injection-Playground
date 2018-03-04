@@ -16,7 +16,7 @@ This project hosts the same sample application implemented using different depen
   </tr>
   <tr>
     <td><a href="https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/dagger2">Dagger 2</a></td>
-    <td>Uses <a href="https://google.github.io/dagger/">Dagger2</a> to add support for <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a>.<br/>
+    <td>Uses <a href="https://google.github.io/dagger/">Dagger 2</a> to add support for <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a>.<br/>
       Some Dagger 2 features used in this sample:<br/>
       <ul>
         <li>Component</li>
