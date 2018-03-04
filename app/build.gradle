@@ -26,8 +26,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:26.1.0"
 
-    // Koin
-    implementation "org.koin:koin-android:0.9.0"
+    // Kodein
+    implementation "com.github.salomonbrys.kodein:kodein:4.1.0"
 
     // Picasso
     implementation "com.squareup.picasso:picasso:2.5.2"
