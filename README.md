@@ -15,8 +15,8 @@ This project hosts the same sample application implemented using different depen
     <th>Description</th>
   </tr>
   <tr>
-    <td>[Dagger 2](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/dagger2)</td>
-    <td>Uses [Dagger 2](https://google.github.io/dagger/) to add support for [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).<br/>
+    <td><a href="https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/dagger2">Dagger 2</a></td>
+    <td>Uses <a href="https://google.github.io/dagger/">Dagger 2</a> to add support for [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).<br/>
       Some Dagger 2 features used in this sample:<br/>
       <ul>
         <li>Component</li>
@@ -28,8 +28,8 @@ This project hosts the same sample application implemented using different depen
     </td>
   </tr>
   <tr>
-    <td>[Koin](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/koin)</td>
-    <td>Uses [koin](https://github.com/Ekito/koin) to add support for dependency injection.<br/>
+    <td><a href="https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/koin">Koin</a></td>
+    <td>Uses <a href="https://github.com/Ekito/koin">koin</a> to add support for dependency injection.<br/>
       Some Koin features used in this sample:<br/>
       <ul>
         <li>Module</li>
