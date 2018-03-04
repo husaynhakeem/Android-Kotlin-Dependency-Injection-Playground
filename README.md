@@ -9,22 +9,38 @@ This project hosts the same sample application implemented using different depen
 
 ### Completed samples
 
-| Sample | Description |
-| ------------- | ------------- |
-| [Dagger 2](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/dagger2) | Uses [Dagger 2](https://google.github.io/dagger/) to add support for [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).
-Some Dagger 2 features used in this sample:
-- Component
-- Module
-- Component dependencies
-- Scopes
-- Compoenent provision and injection methods |
-| [Koin](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/koin) | Uses [koin](https://github.com/Ekito/koin) to add support for dependency injection.
-Some Koin features used in this sample:
-- Module
-- Context
-- Bean
-- Factory
-- Dynamic parameters  |
+<table>
+  <tr>
+    <th>Sample</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>[Dagger 2](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/dagger2)</td>
+    <td>Uses [Dagger 2](https://google.github.io/dagger/) to add support for [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).<br/>
+      Some Dagger 2 features used in this sample:<br/>
+      <ul>
+        <li>Component</li>
+        <li>Module</li>
+        <li>Component dependencies</li>
+        <li>Scopes</li>
+        <li>Compoenent provision and injection methods</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>[Koin](https://github.com/husaynhakeem/Android-Kotlin-Dependency-Injection-Playground/tree/koin)</td>
+    <td>Uses [koin](https://github.com/Ekito/koin) to add support for dependency injection.<br/>
+      Some Koin features used in this sample:<br/>
+      <ul>
+        <li>Module</li>
+        <li>Context</li>
+        <li>Bean</li>
+        <li>Factory</li>
+        <li>Dynamic parameters</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### Samples in progress
 
